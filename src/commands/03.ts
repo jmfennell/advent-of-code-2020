@@ -21,7 +21,7 @@ const countTrees = (
   return count;
 };
 
-export class Day01 extends Command {
+export class Day03 extends Command {
   static description = "Day Three";
 
   async run() {
