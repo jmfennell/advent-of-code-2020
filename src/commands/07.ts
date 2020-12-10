@@ -47,7 +47,7 @@ const bagsThatCanContainBag = (bag: string, rules: bagRule[]): string[] => {
     });
   });
 
-  return bags.filter((_bag: string, index: Number, _bags: string[]) => {
+  return bags.filter((_bag: string, index: number, _bags: string[]) => {
     return _bags.indexOf(_bag) === index;
   });
 };

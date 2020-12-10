@@ -1,5 +1,4 @@
 import Command from "@oclif/command";
-import { group } from "console";
 import { readFileSync } from "fs";
 
 const IndividualAnswersByGroup = (data: string[]): string[][] => {
@@ -69,8 +68,8 @@ const GenerateUniqueGroupAnswers = (data: string[]): string[][] => {
   const groupAnswers: string[][] = [];
   GenerateGroupAnswers(data).forEach((answers: string[]) => {
     groupAnswers.push(
-      answers.filter((answer: string, index: number, answers: string[]) => {
-        return index === answers.indexOf(answer);
+      answers.filter((answer: string, index: number, _answers: string[]) => {
+        return index === _answers.indexOf(answer);
       })
     );
   });
